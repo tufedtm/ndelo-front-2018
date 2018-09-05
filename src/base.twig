@@ -1,0 +1,173 @@
+{% import 'helpers/macros.twig' as macros %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&amp;subset=cyrillic"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="static/css/app.css">
+</head>
+
+<body>
+{#<a href="sg.html" style="display: block;text-align: center;">STYLEGUIDE</a>#}
+
+<header class="site-header">
+  <div class="container header-box">
+    <a class="logo active" href="/">НОВОЕ ДЕЛО</a>
+
+    <nav class="header-nav active">
+      <a href="">Газета</a>
+      <a href="">Общество</a>
+      <a href="">Политика</a>
+      <a href="">Экономика</a>
+      <a href="">Спорт</a>
+      <a href="">Опросы</a>
+    </nav>
+
+    <div class="search-box">
+      <form class="search-form">
+        <input class="search-input" type="text" placeholder="Что хотите найти?">
+      </form>
+      <div class="search-button"></div>
+    </div>
+
+    <div class="user-box">
+      <div class="user-button"></div>
+      <div class="auth-box" data-js-tabs>
+        <ul class="auth-box__tabs-caption" data-js-tabs_caption>
+          <li class="active">Вход</li>
+          <li>Регистрация</li>
+        </ul>
+        <div class="auth-box__tabs-content-wrap active" data-js-tabs_content>
+          <form class="auth-box__tabs-content">
+            <label class="auth-box__input">
+              <input type="text" placeholder="Ваш логин" required>
+            </label>
+            <label class="auth-box__input">
+              <input type="password" placeholder="Пароль" required>
+            </label>
+            <label class="auth-box__input auth-box__input--checkbox">
+              <input type="checkbox" checked>Запомнить пароль
+            </label>
+            <label class="auth-box__input auth-box__input--submit">
+              <input type="submit" value="Войти">
+            </label>
+          </form>
+          {{ macros.auth_box_social() }}
+        </div>
+        <div class="auth-box__tabs-content-wrap" data-js-tabs_content>
+          <form class="auth-box__tabs-content">
+            <label class="auth-box__input">
+              <input type="text" placeholder="Придумайте логин" required>
+            </label>
+            <label class="auth-box__input">
+              <input type="email" placeholder="E-mail" required>
+            </label>
+            <label class="auth-box__input">
+              <input type="password" placeholder="Пароль" required>
+            </label>
+            <label class="auth-box__input">
+              <input type="password" placeholder="Повторите пароль" required>
+            </label>
+            <label class="auth-box__input auth-box__input--submit">
+              <input type="submit" value="Зарегистрироваться">
+            </label>
+          </form>
+          {{ macros.auth_box_social() }}
+        </div>
+      </div>
+    </div>
+
+    <div class="hamburger-box">
+      <nav class="hamburger-nav">
+        <a class="hamburger-nav__item" href="">Статьи</a>
+        <a class="hamburger-nav__item" href="">Новости</a>
+        <a class="hamburger-nav__item" href="">Общество</a>
+        <a class="hamburger-nav__item" href="">Политика</a>
+        <a class="hamburger-nav__item" href="">Блоги</a>
+        <a class="hamburger-nav__item" href="">О газете</a>
+        <a class="hamburger-nav__item" href="">Контакты</a>
+      </nav>
+      <div class="hamburger-button"></div>
+    </div>
+  </div>
+</header>
+
+
+{% block content %}{% endblock %}
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 site-footer__logo-item">
+        <a class="logo logo--footer" href="/">НОВОЕ ДЕЛО</a><br>
+        <span class="tagline">о самом интересном в мире</span>
+
+        <div class="social-box">
+          <a class="social-box__item" href="https://telegram.org" target="_blank">{{ macros.icon('tg') }}</a>
+          <a class="social-box__item" href="https://instagram.com" target="_blank">{{ macros.icon('ig') }}</a>
+          <a class="social-box__item" href="https://vk.com" target="_blank">{{ macros.icon('vk') }}</a>
+          <a class="social-box__item" href="https://twitter.com" target="_blank">{{ macros.icon('tw') }}</a>
+          <a class="social-box__item" href="https://facebook.com" target="_blank">{{ macros.icon('fb') }}</a>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-4 col-sm-6">
+        <nav class="site-footer__nav">
+          <a href="">Новости</a>
+          <a href="">Общество</a>
+          <a href="">Политика</a>
+          <a href="">Экономика</a>
+          <a href="">Спорт</a>
+          <a href="">Опросы</a>
+          <a href="">Все рубрики</a>
+          <a href="past.html">Архив газеты</a>
+        </nav>
+      </div>
+      <div class="col-xl-3 col-md-4 col-sm-6">
+        <nav class="site-footer__nav">
+          <a href="">Стать автором</a>
+          <a href="">Сообщить о новости</a>
+          <a href="">Рекламодетелям</a>
+          <a href="">Сообщить об ошибке</a>
+          <a href="">О редакции</a>
+          <a href="">Политика конфиденциальности</a>
+          <a href="">Новости по регионам</a>
+          <a href="">Контакты</a>
+        </nav>
+      </div>
+      <div class="col-xl-3 col-md-4">
+        <div class="contacts__item">
+          <span class="contacts__title">ТЕЛЕФОН</span>
+          <span class="contacts__text">+7 (8722) 67-03-47</span>
+        </div>
+        <div class="contacts__item">
+          <span class="contacts__title">АДРЕС</span>
+          <span class="contacts__text">г. Махачкала, ул. Батырмурзаева,64</span>
+        </div>
+        <div class="contacts__item">
+          <span class="contacts__title">ПОЧТА</span>
+          <a class="contacts__text" href="mailto:info@ndelo.ru">info@ndelo.ru</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom row">
+      <span class="col-xl-4 col-md-4"><a href="">Карта сайта</a></span>
+      <span class="col-xl-3 col-md-4">Разработали: <a class="developers-cpr" href="">Дизайнеры</a></span>
+      <span class="col-xl-5 col-md-4 order-md-first">ООО «Новое дело» &copy;1991-2018</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="static/lib/jquery.min.js"><\/script>')</script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/jquery-form-styler@2/dist/jquery.formstyler.min.js"></script>
+<script src="static/js/app.js"></script>
+
+</body>
+</html>

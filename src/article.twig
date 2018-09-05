@@ -1,0 +1,339 @@
+{% extends 'base.twig' %}
+
+{% block title %}Статья{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="breadcrumbs order-lg-first col-12">
+        <a href="/">Главная</a> / <a href="">Общество</a> / За что мы любим Дуэйна «Скалу» Джонсона
+      </div>
+      <main class="col-lg-9 order-lg-first">
+        {{ macros.article_card(single=1) }}
+        <div class="article-caption">
+          <span class="article-authors">Аида Гаджиханова, Мурад Мурадов</span>
+          <span class="article-play active" data-js-audio>Прослушать</span>
+          <span class="article-pause" data-js-audio>Продолжить</span>
+          <span class="article-photograph">Фото: Мадина Расулова</span>
+        </div>
+
+        <div class="article-wysiwyg">
+          <p class="article-wysiwyg__caption">План реализации проекта «Исторический парк “Россия — моя история. Город
+            Махачкала”» в парке имени Ленинского Комсомола вызвал на этой неделе широкий общественный резонанс. Многие
+            горожане высказались против застройки парка. Создана инициативная группа, которая уже обратилась в суд с
+            требованием запретить возводить на территории парка капитальное строение. Создана и петиция к президенту
+            страны с просьбой сохранить парк от застройки.</p>
+
+          <p><strong>«Я говорю — молчат все!»</strong> <br> Республиканская власть свое слово сказала и отступать от
+            своих планов — вырубки деревьев и строительства капитального здания на их месте, — судя по всему, не
+            намерена.</p>
+
+          <p>Об этом говорят и наскоро собранные в мэрии общественники города, которые поддержали проект. И пытались
+            представить его «важным объектом для будущего поколения».</p>
+
+          <p>Одной из немногих, кто открыто выступил против застройки парка, была депутат Кировского района Махачкалы
+            Загра Магомедова.</p>
+
+          <p>Как она рассказала корреспонденту «Нового дела», до публичных слушаний депутатский корпус высказался против
+            строительства в парке, но уже в ходе обсуждения мало кто из депутатов стал протестовать против этой
+            инициативы.</p>
+
+          <p>Окончательно убедить общественность в необходимости реализации проекта в парке, видимо, должна была
+            пресс-конференция с участием руководителя Дагестанского некоммерческого фонда «Россия — моя история» Махти
+            Рамазанова, главного архитектора города Магомедрасула Гитинова и заведующего отделом этнографии Института
+            ИАЭ ДНЦ РАН Магомедхана Магомедханова. Кроме журналистов на нее пришли и представители общественности. В
+            итоге вместо вопросов звучали попытки убедить чиновников отказаться от идеи застройки парка в центре города.
+            <br> Вот некоторые ответы на эти просьбы:</p>
+
+          <p>«В Вашингтоне все музеи находятся вокруг Белого дома», «20 лет парк трогали, а вы молчали», «Это всего лишь
+            три тысячи квадратных метров». Много говорилось о важности проекта в культурном, образовательном и
+            воспитательном плане. Мол, «объединяющий всю Россию» новый объект будет «привлекателен для туристов».</p>
+
+          {{ macros.article_card(article=1) }}
+
+          <p>Главный архитектор заявил, что в Махачкале достаточно зелени: «Махачкала в основном одноэтажная.</p>
+
+          <p>И у каждого во дворе есть свои зеленые насаждения. Я, например, живу в Кяхулае, и у меня есть».</p>
+
+          <p>Гитинов также отметил, что построить исторический парк рядом с озером Ак-Гёль не получится, так как там
+            «идет разработка проекта Кафедрального собора в честь Александра Невского, и скоро начнется строительство
+            храма». На просьбу подыскать другое место для музея Махти Рамазанов заявил: «Нет другой возможности. Мы
+            искали другие варианты. Один из вариантов — приспособить уже имеющееся здание. Но мы не смогли найти
+            подходящее здание», которое бы соответствовало всем критериям.</p>
+
+          <p>В конце директор РИА «Дагестан» Магомед Магомедов назвал пресс-конференцию «самой отвратительной за
+            последнее время» а когда журналисты высказали возмущения, он крикнул: «Я говорю — молчат все! Это моя
+            площадка. Я говорю, потом будете говорить».</p>
+
+          <blockquote>
+            <cite><strong>Абдулкадыр Омаров</strong> <br>
+              <small>заведующий кафедрой истории Дагестана ДГУ</small>
+            </cite>
+            <p>План реализации проекта «Исторический парк “Россия — моя история. Город Махачкала”» в парке имени
+              Ленинского Комсомола вызвал на этой неделе широкий общественный резонанс. Многие горожане высказались
+              против застройки парка.</p>
+          </blockquote>
+
+          <strong style="font-size: 18px;">Признаки того, что вы в ловушке:</strong>
+          <ul>
+            <li>Попытка писать сразу быстрый, нетребовательный к ресурсам код</li>
+            <li>Желание выжать из кода всё, в ущерб остальным показателям</li>
+            <li>Вера в то, что замена всех операций умножения на 2 на побитовый сдвиг сделают из программы конфетку</li>
+          </ul>
+
+          <div class="article-wysiwyg__quiz-box">
+            <strong>Строительство музея в парке Ленинского комсомола. Ваше мнение.</strong>
+
+            <form>
+              <label class="article-wysiwyg__quiz-question">
+                <input type="radio" name="article-quiz1" value="1" checked>Возмутительная халатность правительства
+              </label>
+              <label class="article-wysiwyg__quiz-question">
+                <input type="radio" name="article-quiz1" value="2">Я водитель, меня камеры напрягали
+              </label>
+              <label class="article-wysiwyg__quiz-question">
+                <input type="radio" name="article-quiz1" value="3">Нейтрально, я не нарушаю ПДД
+              </label>
+            </form>
+          </div>
+
+          <div class="article-wysiwyg__quiz-box">
+            <strong>Строительство музея в парке Ленинского комсомола. Ваше мнение.</strong>
+
+            <form>
+              <label class="article-wysiwyg__quiz-question">
+                <input type="radio" name="article-quiz2" value="1" checked>Возмутительная халатность правительства
+              </label>
+              <label class="article-wysiwyg__quiz-question">
+                <input type="radio" name="article-quiz2" value="2">Я водитель, меня камеры напрягали
+              </label>
+              <label class="article-wysiwyg__quiz-question">
+                <input type="radio" name="article-quiz2" value="3">Нейтрально, я не нарушаю ПДД
+              </label>
+            </form>
+          </div>
+
+          <div class="article-wysiwyg__quiz-box">
+            <strong>Строительство музея в парке Ленинского комсомола. Ваше мнение.</strong>
+
+            <ul>
+              <li class="article-wysiwyg__quiz-answer" data-answer-percent="25">
+                Возмутительная халатность правительства
+                <div class="quiz__result">
+                  <div class="quiz__progress-all"></div>
+                  <div class="quiz__progress-current" style="width: 60%;"></div>
+                </div>
+              </li>
+              <li class="article-wysiwyg__quiz-answer" data-answer-percent="15">
+                Я водитель, меня камеры напрягали
+                <div class="quiz__result">
+                  <div class="quiz__progress-all"></div>
+                  <div class="quiz__progress-current" style="width: 15%;"></div>
+                </div>
+              </li>
+              <li class="article-wysiwyg__quiz-answer" data-answer-percent="60">
+                Нейтрально, я не нарушаю ПДД
+                <div class="quiz__result">
+                  <div class="quiz__progress-all"></div>
+                  <div class="quiz__progress-current" style="width: 25%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="article-wysiwyg__slider" data-js-slider>
+            <div class="slider-cell">
+              <img src="https://placeimg.com/850/360/people"
+                   alt="Кадр из <small>Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание форм развития.</small>">
+            </div>
+            <div class="slider-cell">
+              <img src="https://placeimg.com/350/360/people"
+                   alt="Кадр узкий <small>Идейные, а также дальнейшее развитие различных форм деятельности в значительной.</small>">
+            </div>
+            <div class="slider-cell">
+              <img src="https://placeimg.com/900/400/people"
+                   alt="Кадр <small>Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности в значительной.</small>">
+            </div>
+            <div class="slider-cell">
+              <img src="https://placeimg.com/850/359/people"
+                   alt="Кадр из фильма <small>Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности в значительной степени обуславливает создание форм развития.</small>">
+            </div>
+            <p class="slider-caption" data-js-slider-caption></p>
+          </div>
+
+        </div>
+
+        <div class="article__tags-box">
+          <a href="">Здоровье</a>
+          <a href="">Наука</a>
+          <a href="">Образование</a>
+          <a href="">Семья и дети</a>
+          <a href="">Природа</a>
+          <a href="">Космос</a>
+        </div>
+
+        <div class="article__contact-box">
+          <span class="contact-box__title">Знаете больше? Сообщите редакции!</span>
+          <div class="contact-box__content">
+            <div class="contact-box__content-item">
+              <span class="contact-box__subtitle">Телефон</span>
+              <span class="contact-box__text contact-box__text--phone">+7 (8722) 67-03-47</span>
+            </div>
+            <div class="contact-box__content-item">
+              <span class="contact-box__subtitle">Адрес</span>
+              <span class="contact-box__text">г. Махачкала, ул. Батырмурзаева, 64</span>
+            </div>
+            <div class="contact-box__content-item">
+              <span class="contact-box__subtitle">Почта</span>
+              <a class="contact-box__text" href="mailto:info@ndelo.ru">info@ndelo.ru</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="article__we-in-soc">
+          <span>Мы в соц. сетях: </span>
+          <a class="social-box__item" href="https://telegram.org" target="_blank">{{ macros.icon('tg') }}</a>
+          <a class="social-box__item" href="https://instagram.com" target="_blank">{{ macros.icon('ig') }}</a>
+          <a class="social-box__item" href="https://vk.com" target="_blank">{{ macros.icon('vk') }}</a>
+          <a class="social-box__item" href="https://twitter.com" target="_blank">{{ macros.icon('tw') }}</a>
+          <a class="social-box__item" href="https://facebook.com" target="_blank">{{ macros.icon('fb') }}</a>
+        </div>
+
+        <div class="no-gutters">
+          {{ macros.banner('middle') }}
+        </div>
+
+        <div class="article__comment-box">
+          <span class="comment-box__title">Авторизуйтесь, чтобы оставить комментарий</span>
+          <div class="comment-box__need-auth">
+            <a class="need-auth__item" href="https://telegram.org" target="_blank">{{ macros.icon('tg') }}</a>
+            <a class="need-auth__item" href="https://instagram.com" target="_blank">{{ macros.icon('ig') }}</a>
+            <a class="need-auth__item" href="https://vk.com" target="_blank">{{ macros.icon('vk') }}</a>
+            <a class="need-auth__item" href="https://twitter.com" target="_blank">{{ macros.icon('tw') }}</a>
+            <a class="need-auth__item" href="https://facebook.com" target="_blank">{{ macros.icon('fb') }}</a>
+          </div>
+        </div>
+
+        <div class="article__comment-box">
+          <span class="comment-box__title">А вы что думаете?</span>
+          <span class="comment-box__subtitle">Комментарии: 62</span>
+
+          <div class="comment-box__comment">
+            <img class="comment__avatar" src="https://placeimg.com/77/77/people" alt="">
+            <div class="comment-box__content">
+              <span class="comment__author">Гость</span>
+              <span class="comment__date">17 февраля 2018</span>
+              <p class="comment__text">
+                Lorem ipsum dolor sit amet.
+              </p>
+              <button class="comment__reply">{{ macros.icon('reply') }}Ответить</button>
+              <button class="comment__like">{{ macros.icon('like') }}17</button>
+              <button class="comment__dislike">{{ macros.icon('like') }}13</button>
+            </div>
+          </div>
+
+          <div class="comment-box__comment">
+            <img class="comment__avatar" src="https://placeimg.com/78/78/people" alt="">
+            <div class="comment-box__content">
+              <span class="comment__author">Гость</span>
+              <span class="comment__date">17 февраля 2018</span>
+              <p class="comment__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, quae.
+              </p>
+              <button class="comment__reply">{{ macros.icon('reply') }}Ответить</button>
+              <button class="comment__like">{{ macros.icon('like') }}17</button>
+              <button class="comment__dislike">{{ macros.icon('like') }}13</button>
+            </div>
+          </div>
+
+          <div class="comment-box__comment comment-box__comment--reply">
+            <img class="comment__avatar" src="https://placeimg.com/79/79/people" alt="">
+            <div class="comment-box__content">
+              <span class="comment__author">Гость</span>
+              <span class="comment__date">17 февраля 2018</span>
+              <p class="comment__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at delectus magnam, maiores quas quidem!
+              </p>
+              <button class="comment__reply">{{ macros.icon('reply') }}Ответить</button>
+              <button class="comment__like">{{ macros.icon('like') }}17</button>
+              <button class="comment__dislike">{{ macros.icon('like') }}13</button>
+            </div>
+          </div>
+
+          <div class="comment-box__comment">
+            <img class="comment__avatar" src="https://placeimg.com/80/80/people" alt="">
+            <div class="comment-box__content">
+              <span class="comment__author">Гость</span>
+              <span class="comment__date">17 февраля 2018</span>
+              <p class="comment__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam dignissimos doloribus ducimus
+                excepturi exercitationem id minus quia tempore. Consequuntur?
+              </p>
+              <button class="comment__reply">{{ macros.icon('reply') }}Ответить</button>
+              <button class="comment__like">{{ macros.icon('like') }}17</button>
+              <button class="comment__dislike">{{ macros.icon('like') }}13</button>
+            </div>
+          </div>
+
+          <div class="comment-box__comment comment-box__comment--reply">
+            <img class="comment__avatar" src="https://placeimg.com/81/81/people" alt="">
+            <div class="comment-box__content">
+              <span class="comment__author">Гость</span>
+              <span class="comment__date">17 февраля 2018</span>
+              <p class="comment__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda consectetur ea mollitia quasi, quo
+                rem sequi veritatis vero? Debitis, illo non odit porro quaerat totam.
+              </p>
+              <button class="comment__reply">{{ macros.icon('reply') }}Ответить</button>
+              <button class="comment__like">{{ macros.icon('like') }}17</button>
+              <button class="comment__dislike">{{ macros.icon('like') }}13</button>
+            </div>
+          </div>
+
+          <div class="comment-box__comment comment-box__comment--reply">
+            <img class="comment__avatar" src="https://placeimg.com/82/82/people" alt="">
+            <div class="comment-box__content">
+              <span class="comment__author">Гость</span>
+              <span class="comment__date">17 февраля 2018</span>
+              <p class="comment__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores dignissimos, dolore
+                dolores et eum eveniet explicabo fugiat laborum molestiae pariatur quis quo sint tenetur veritatis vero
+                vitae? Accusamus, provident!
+              </p>
+              <button class="comment__reply">{{ macros.icon('reply') }}Ответить</button>
+              <button class="comment__like">{{ macros.icon('like') }}17</button>
+              <button class="comment__dislike">{{ macros.icon('like') }}13</button>
+            </div>
+          </div>
+
+          <div class="comment-box__add-comment-box">
+            <span class="add-comment-box__title">Добавить комментарий</span>
+            <div class="add-comment-box__content">
+              <img class="add-comment-box__avatar" src="https://placeimg.com/83/83/people" alt="">
+              <form class="add-comment-box__form">
+                <input class="add-comment-box__input" type="text" placeholder="Ваше имя" required>
+                <textarea class="add-comment-box__input" placeholder="Комментарий" required></textarea>
+                <input class="add-comment-box__input add-comment-box__input--submit" type="submit">
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="similar-box" data-js-similar-slider>
+          <span class="similar-box__title">Смотрите также</span>
+          <div class="row">
+            {{ macros.article_card() }}
+            {{ macros.article_card() }}
+            {{ macros.article_card() }}
+          </div>
+
+        </div>
+
+      </main>
+      <aside class="col-lg-3 order-first">
+        {% include 'helpers/sidebar.twig' %}
+      </aside>
+    </div>
+  </div>
+{% endblock %}

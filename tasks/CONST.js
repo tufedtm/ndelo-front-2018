@@ -1,6 +1,6 @@
 export default {
   dst: 'dist',
-  ghPages: 'dist/**/*',
+  ghPages: './dist/**/*',
 
   font: {
     src: 'src/static/font/**/*',

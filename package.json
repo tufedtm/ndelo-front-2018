@@ -33,6 +33,7 @@
   },
   "scripts": {
     "dev": "gulp",
-    "gh_pages": "gulp gh_pages"
+    "prod": "gulp prod",
+    "gh_pages": "gulp gh_pages:src"
   }
 }

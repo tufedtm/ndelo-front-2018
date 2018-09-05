@@ -1,0 +1,43 @@
+{% extends 'base.twig' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <main class="col-lg-9 order-lg-first">
+        <div class="row">
+          {{ macros.article_card(long=1) }}
+          {{ macros.article_card(video=1) }}
+          {{ macros.article_card(banner=1) }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          <div class="d-none d-lg-block">
+            {{ macros.banner('middle') }}
+          </div>
+          {{ macros.article_card(col_lg=8, col_md=8, big=1) }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          <div class="d-none d-lg-block">
+            {{ macros.banner('middle') }}
+          </div>
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card(banner=1) }}
+          {{ macros.article_card() }}
+        </div>
+      </main>
+      <aside class="col-lg-3 order-first">
+        {% include 'helpers/sidebar.twig' %}
+      </aside>
+      <div class="d-none d-lg-block">
+        {{ macros.banner('long') }}
+      </div>
+    </div>
+  </div>
+{% endblock %}

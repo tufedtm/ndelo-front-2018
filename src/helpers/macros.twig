@@ -1,0 +1,157 @@
+{% macro article_card(
+  col_lg=4,
+  col_md=4,
+  col_sm=6,
+  video=0,
+  long=0,
+  big=0,
+  banner=0,
+  single=0,
+  article=0
+  ) %}
+  {% if long %}
+    <div class="article-card col-lg-{{ col_lg }} col-md-{{ col_md }} col-sm-{{ col_sm }}">
+      <a class="article-card__image article-card__image--dark" href="article.html">
+        <img src="https://placeimg.com/263/429/people" alt="">
+      </a>
+      <div class="article-card__content">
+        <span class="article-card__tag">Истории</span>
+        <a href="article.html">
+          <h2 class="article-card__title article-card__title--dark">За что мы любим Дуэйна «Скалу» Джонсона</h2>
+        </a>
+        <span class="article-card__date">22.07.18 20:35</span>
+      </div>
+    </div>
+  {% elseif big %}
+    <div class="article-card col-lg-{{ col_lg }} col-md-{{ col_md }}">
+      <a class="article-card__image article-card__image--dark" href="article.html">
+        <img src="https://placeimg.com/557/429/people" alt="">
+      </a>
+      <div class="article-card__content">
+        <span class="article-card__tag">Истории</span>
+        <a href="article.html">
+          <h2 class="article-card__title article-card__title--dark">За что мы любим Дуэйна «Скалу» Джонсона</h2>
+        </a>
+        <span class="article-card__date">22.07.18 20:35</span>
+      </div>
+    </div>
+  {% elseif banner %}
+    <div class="article-card article-card--banner col-lg-{{ col_lg }} col-md-{{ col_md }} col-sm-{{ col_sm }}">
+      <a href="https://google.ru" target="_blank"><img src="https://placeimg.com/263/429/people" alt=""></a>
+    </div>
+  {% elseif single %}
+    <div class="article-card article-card--single">
+      <span class="article-card__image article-card__image--single">
+        <img src="https://placeimg.com/850/430/people" alt="">
+      </span>
+      <div class="article-card__content article-card__content--single">
+        <span class="article-card__tag">мнения</span>
+        <h2 class="article-card__title">За что мы любим Дуэйна «Скалу» Джонсона</h2>
+        <span class="article-card__date">22.07.18 20:35</span>
+      </div>
+    </div>
+  {% elseif article %}
+    <div class="article-card col-lg-{{ col_lg }} col-md-5 col-sm-6 article-card--wysiwyg">
+      <a class="article-card__image article-card__image--dark" href="article.html">
+        <img src="https://placeimg.com/263/429/people" alt="">
+      </a>
+      <div class="article-card__content">
+        <span class="article-card__tag">Истории</span>
+        <a href="article.html">
+          <h2 class="article-card__title article-card__title--dark">За что мы любим Дуэйна «Скалу» Джонсона</h2>
+        </a>
+        <span class="article-card__date">22.07.18 20:35</span>
+      </div>
+    </div>
+  {% else %}
+    <div class="article-card col-lg-{{ col_lg }} col-md-{{ col_md }} col-sm-{{ col_sm }}">
+      <a class="article-card__image {% if video %}article-card__image--video{% endif %}" href="article.html">
+        <img src="https://placeimg.com/263/200/people" alt="">
+      </a>
+      <a href="article.html">
+        <h2 class="article-card__title">Организаторы Российско-Японского форума встретились</h2>
+      </a>
+      <p class="article-card__text">
+        Президент "Майнити Симбун" Масахиро Маруяма перед открытием форума встретились.
+      </p>
+      <span class="article-card__date">22.07.18 20:35</span>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+
+{% macro banner(type, col=12) %}
+  {% set height = 130 %}
+  {% if type == 'long' %}
+    {% set width = 1140 %}
+  {% elseif type == 'middle' %}
+    {% set width = 847 %}
+  {% elseif type == 'vertical' %}
+    {% set width = 263 %}
+    {% set height = 429 %}
+  {% endif %}
+  <div class="banner--{{ type }} col-{{ col }}">
+    <a href="https://google.ru" target="_blank"><img src="https://placeimg.com/{{ width }}/{{ height }}" alt=""></a>
+  </div>
+{% endmacro %}
+
+
+
+{% macro icon(type) %}
+  {% if type == 'tg' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 4.7625 4.2333">
+      <path class="social-icon"
+            d="M.08 2.03l1.1.42.43 1.4c.03.08.14.1.2.06l.62-.5c.07-.06.16-.06.23 0l1.1.8c.07.06.18.02.2-.07l.8-3.97C4.8.06 4.7-.04 4.6 0L.07 1.8c-.1.05-.1.2 0 .25zm1.46.2L3.68.88c.04-.03.08.03.05.06L1.96 2.62c-.06.06-.1.13-.12.22l-.06.46c0 .06-.1.06-.1 0l-.24-.83c-.02-.1.02-.2.1-.24z"/>
+    </svg>
+  {% elseif type == 'ig' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 4.7625 4.7625">
+      <path class="social-icon"
+            d="M.6 0h3.55c.34 0 .6.25.6.6v3.55c0 .36-.26.6-.6.6H.6c-.32 0-.6-.24-.6-.6V.6C0 .26.28 0 .6 0zm2.87.53c-.12 0-.22.1-.22.2v.53c0 .1.1.2.22.2H4c.13 0 .22-.1.22-.2V.74c0-.1-.1-.2-.2-.2zM4.22 2h-.4c.02.14.05.28.05.42 0 .8-.67 1.44-1.48 1.44-.83 0-1.5-.65-1.5-1.44 0-.14.03-.28.07-.4H.53v2c0 .1.08.2.2.2h3.3c.1 0 .2-.1.2-.2v-2zM2.4 1.45c-.54 0-.97.42-.97.93 0 .5.43.93.96.93.5 0 .94-.42.94-.93 0-.5-.43-.93-.95-.93z"/>
+    </svg>
+  {% elseif type == 'vk' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 4.7625 2.6458">
+      <path class="social-icon"
+            d="M4.74 2.4c0-.02 0-.03-.02-.04-.08-.15-.24-.32-.47-.53-.12-.1-.2-.18-.22-.2-.05-.08-.06-.14-.03-.2.02-.06.1-.16.22-.32.07-.08.12-.15.16-.2.3-.37.4-.6.38-.7L4.74.16c0-.02-.03-.03-.08-.04-.04 0-.1-.02-.15 0h-.7c-.02 0-.04 0-.06 0-.02 0-.03 0-.03 0v.02c-.02 0-.03 0-.04.02 0 .02-.02.03-.02.05-.08.2-.17.37-.27.54-.06.1-.12.18-.17.26-.05.07-.1.13-.13.16s-.06.06-.1.08c-.02.02-.04.03-.06.03 0 0-.02-.02-.03-.02-.02 0-.04-.03-.05-.06-.02-.02-.03-.06-.03-.1-.02-.03-.02-.06-.02-.1 0-.02 0-.06 0-.1 0-.06 0-.1 0-.1 0-.07 0-.14 0-.2 0-.08 0-.14 0-.18 0-.04 0-.08 0-.13 0-.04 0-.07 0-.1s0-.05-.02-.08c0-.02-.03-.04-.05-.06 0 0-.04-.02-.07-.03C2.53 0 2.43 0 2.3 0c-.32 0-.5.02-.6.06-.04.02-.07.04-.1.07-.03.04-.03.06 0 .06.1 0 .16.04.2.1l.02.02c0 .02.02.06.03.1 0 .07.02.12.02.2 0 .1 0 .2 0 .3 0 .07 0 .14-.02.2 0 .03-.02.07-.03.1-.02.03-.03.05-.03.05-.02 0-.02 0-.02 0-.03.02-.05.03-.07.03 0 0-.04-.02-.08-.04-.03-.02-.06-.05-.1-.1-.03-.03-.07-.1-.12-.16-.04-.07-.1-.15-.14-.25L1.22.68c-.02-.04-.06-.1-.1-.2-.04-.08-.08-.16-.1-.24C.98.2.96.18.94.16H.93S.9.13.9.12c-.02 0-.04 0-.06 0H.16C.1.12.04.12.02.16 0 .2 0 .2 0 .23 0 .24 0 .26 0 .3c.1.2.22.43.34.64.1.2.22.38.3.5.1.14.18.26.27.38.1.1.15.18.18.22.03.03.05.05.07.07l.06.07c.05.03.1.08.2.13.06.06.15.1.24.16.1.06.2.1.33.13.12.02.24.04.36.03h.3c.04 0 .1-.02.12-.05 0-.02.02-.04.03-.06 0-.02 0-.04 0-.06 0-.07 0-.14.02-.2 0-.05.03-.1.04-.12.02-.03.04-.05.06-.07.02-.02.03-.03.04-.03 0 0 0 0 .02 0 .04-.02.08 0 .14.03.05.03.1.08.15.14.05.06.1.12.17.2.07.06.12.1.17.15l.04.03c.04.02.08.03.13.05.05.02.1.02.14 0h.65c.06 0 .1 0 .14-.03.03-.02.05-.04.05-.06 0-.03 0-.06 0-.1 0-.02 0-.04 0-.05z"/>
+    </svg>
+  {% elseif type == 'tw' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 4.7625 3.9688">
+      <path class="social-icon"
+            d="M4.76.47C4.6.55 4.4.6 4.2.63c.2-.13.36-.32.43-.56-.2.12-.4.2-.62.25C3.84.12 3.6 0 3.3 0c-.54 0-.98.45-.98 1 0 .08 0 .16.03.23C1.53 1.2.8.8.33.18.25.33.2.5.2.68c0 .35.17.66.43.84-.16 0-.3-.05-.44-.12 0 .5.33.9.78 1-.1 0-.17.03-.26.03-.07 0-.13 0-.2-.02.14.4.5.7.93.7-.34.27-.76.43-1.22.43-.08 0-.15 0-.23 0 .43.27.95.44 1.5.44 1.8 0 2.78-1.53 2.78-2.85V1c.2-.15.35-.33.48-.53z"/>
+    </svg>
+  {% elseif type == 'fb' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19" viewBox="0 0 2.6458 5.0271">
+      <path class="social-icon"
+            d="M2.55 0H1.9C1.2 0 .75.5.75 1.24v.57H.1c-.06 0-.1.05-.1.1v.84c0 .05.04.1.1.1h.64v2.08c0 .06.04.1.1.1h.83c.06 0 .1-.04.1-.1V2.84h.75c.05 0 .1-.05.1-.1V1.9c0-.02 0-.04-.03-.06-.03-.02-.06-.03-.08-.03h-.75v-.48c0-.23.05-.35.35-.35h.43c.05 0 .1-.04.1-.1V.1c0-.05-.05-.1-.1-.1z"/>
+    </svg>
+  {% elseif type == 'reply' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 5.2917 3.9688">
+      <path class="icon-path" fill="#6f838f"
+            d="M5.24 1.7L3.6.05C3.53 0 3.46 0 3.4 0c-.05.04-.1.1-.1.17V1h-.5C1.27 1 0 2.24 0 3.8c0 .08.05.14.12.16 0 0 .03 0 .05 0 .05 0 .1-.02.14-.07l.06-.1c.44-.7 1.25-1.15 2.1-1.15h.85v.82c0 .07.05.13.1.16.07.02.14 0 .2-.04l1.64-1.66c.07-.07.07-.17 0-.24zm-1.6 1.37v-.6c0-.08-.08-.16-.17-.16h-1c-.8 0-1.54.35-2.07.9.27-1.07 1.25-1.88 2.4-1.88h.67c.1 0 .17-.07.17-.16v-.6L4.9 1.82z"/>
+    </svg>
+  {% elseif type == 'like' %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 5.8208 6.0854">
+      <path class="icon-path" fill="#6f838f"
+            d="M5.65 4.14c.12-.16.18-.33.17-.5 0-.2-.1-.35-.16-.45.08-.2.1-.54-.16-.8-.2-.17-.54-.26-1-.23-.34 0-.6.07-.62.08-.07 0-.13.02-.2.04 0-.1 0-.3.16-.75C4 1 4 .6 3.8.3S3.26 0 3.17 0c-.1 0-.18.04-.25.1-.14.18-.12.48-.1.62-.17.45-.63 1.55-1.02 1.86 0 0-.02 0-.02.02-.12.12-.2.26-.25.37-.07-.04-.16-.06-.25-.06H.52c-.3 0-.52.25-.52.54V5.5c0 .3.23.54.52.54h.76c.12 0 .22-.04.3-.1l.3.03c.04 0 .85.1 1.67.1.15 0 .3.02.42.02.22 0 .42-.03.58-.07.38-.08.65-.25.78-.5.1-.18.1-.36.08-.48.26-.23.3-.48.3-.66 0-.1-.03-.2-.05-.26zM.52 5.7c-.1 0-.18-.1-.18-.2V3.45c0-.1.08-.2.18-.2h.76c.1 0 .2.1.2.2V5.5c0 .1-.1.2-.2.2H.52zM5.32 4c-.05.04-.06.13-.02.2 0 0 .05.1.06.2 0 .17-.07.32-.23.45-.06.04-.1.12-.06.2 0 0 .05.16-.04.32-.08.16-.27.26-.55.33-.23.05-.53.05-.9.02h-.03c-.8.02-1.62-.1-1.63-.1H1.8c0-.04 0-.08 0-.1V3.43c0-.06 0-.1-.02-.16.02-.1.1-.28.23-.44C2.6 2.4 3.14.86 3.16.8c0-.03 0-.06 0-.1 0-.13 0-.3.02-.36.07 0 .25.02.36.17.13.2.12.5-.02.94-.2.65-.22 1-.05 1.14.08.07.2.08.27.05.08-.02.15-.04.22-.05 0 0 0 0 .02 0 .38-.1 1.07-.14 1.3.08.2.2.07.44.05.47-.03.07-.02.16.04.22 0 0 .14.13.14.3 0 .1-.05.22-.15.34z"/>
+    </svg>
+  {% endif %}
+{% endmacro %}
+
+
+
+{% macro auth_box_social() %}
+  <div class="auth-box__social-box">
+    <span class="auth-box__social-title">или через соц. сети</span>
+    <div class="auth-box__social-items">
+      <a class="auth-box__social-item" href="">
+        {{ icon('vk') }}
+      </a>
+      <a class="auth-box__social-item" href="">
+        {{ icon('tw') }}
+      </a>
+      <a class="auth-box__social-item" href="">
+        {{ icon('fb') }}
+      </a>
+    </div>
+  </div>
+{% endmacro %}

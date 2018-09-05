@@ -1,0 +1,36 @@
+{% import 'helpers/macros.twig' as macros %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>STYLEGUIDE</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif&amp;subset=cyrillic"
+        rel="stylesheet">
+  <link rel="stylesheet" href="static/css/app.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row aifs">
+    {{ macros.article_card(col_lg=3, long=1) }}
+    {{ macros.article_card(col_lg=3) }}
+    {{ macros.article_card(col_lg=3, long=1) }}
+    {{ macros.article_card(col_lg=3, banner=1) }}
+    <div class="banner--middle col-9">
+      <a href="https://google.ru" target="_blank"><img src="https://placeimg.com/847/130" alt=""></a>
+    </div>
+    {{ macros.article_card(col_lg=6, big=1) }}
+    {{ macros.article_card(col_lg=3, video=1) }}
+    {{ macros.article_card(col_lg=3, long=1) }}
+    {{ macros.article_card(col_lg=3) }}
+    {{ macros.article_card(col_lg=3, banner=1) }}
+  </div>
+  <div class="banner-long">
+    <a href="https://google.ru" target="_blank"><img src="https://placeimg.com/1140/130" alt=""></a>
+  </div>
+</div>
+
+</body>
+</html>

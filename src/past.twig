@@ -1,0 +1,73 @@
+{% extends 'base.twig' %}
+
+{% block title %}Прошлые номера{% endblock %}
+
+{% block content %}
+  <div class="container">
+
+    <div class="row">
+      <div class="breadcrumbs col-12 order-lg-first">
+        <a href="/">Главная</a> / Общество
+      </div>
+      <div class="past-numbers__caption col-12 order-lg-first">
+        <h1 class="page-title">Прошлые номера</h1>
+
+        <form class="past-numbers__form">
+          <select>
+            <option value="№49 (1345)">№49 (1345) 10 ноября 2017</option>
+            <option value="№48 (1344)">№48 (1344) 10 ноября 2017</option>
+            <option value="№45 (1341)">№45 (1341) 10 ноября 2017</option>
+            <option value="№47 (1343)">№47 (1343) 10 ноября 2017</option>
+            <option value="№46 (1342)">№46 (1342) 10 ноября 2017</option>
+            <option value="№44 (1340)">№44 (1340) 10 ноября 2017</option>
+          </select>
+        </form>
+      </div>
+
+      <main class="col-lg-9 order-lg-first">
+        <span class="newspaper-page">1 полоса</span>
+        <div class="row">
+          {{ macros.article_card(long=1) }}
+          {{ macros.article_card(video=1) }}
+          {{ macros.article_card(banner=1) }}
+        </div>
+        <span class="newspaper-page">2 полоса</span>
+        <div class="row">
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.banner('middle') }}
+        </div>
+        <span class="newspaper-page">3 полоса</span>
+        <div class="row">
+          {{ macros.article_card(col_lg=8, big=1) }}
+          {{ macros.article_card() }}
+        </div>
+        <span class="newspaper-page">4 полоса</span>
+        <div class="row">
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.banner('middle') }}
+        </div>
+        <span class="newspaper-page">5 полоса</span>
+        <div class="row">
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+          {{ macros.article_card(banner=1) }}
+          {{ macros.article_card() }}
+          {{ macros.article_card() }}
+        </div>
+      </main>
+      <aside class="col-lg-3 order-first">
+        {% include 'helpers/sidebar.twig' %}
+      </aside>
+
+      <div class="d-none d-lg-block">
+        {{ macros.banner('long') }}
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
